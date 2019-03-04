@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
-import { Grid } from 'react-css-spinners'
+import { Grid, Ripple, Spinner } from 'react-css-spinners'
 class App extends Component {
   render () {
-    return <Grid />
+    return (
+      <>
+        <Grid />
+        <Ripple />
+        <Spinner />
+      </>
+    )
   }
 }
 
