@@ -18,9 +18,16 @@
     ></script>
     <script src="./node_modules/react-css-spinners/dist/bundle.umd.js"></script>
     <script>
-      const { Spinner } = window.ReactCSSSpinners;
+      const { Spinner, Grid, Ripple } = window.ReactCSSSpinners;
       const container = document.getElementById("container");
-      ReactDOM.render(React.createElement(Spinner), container);
+      const Container = React.createElement(
+        React.Fragment,
+        null,
+        React.createElement(Spinner),
+        React.createElement(Grid),
+        React.createElement(Ripple)
+      );
+      ReactDOM.render(Container, container);
     </script>
   </body>
 </html>

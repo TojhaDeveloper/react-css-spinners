@@ -1,6 +1,6 @@
-const { createElement } = require('react')
-const { Spinner } = require('react-css-spinners')
-const ReactDOM = require('react-dom/server')
+const { createElement, Fragment } = require('react')
+const { Spinner, Grid, Ripple } = require('react-css-spinners')
+const { renderToString } = require('react-dom/server')
 const express = require('express')
 
 const port = 3000
@@ -11,7 +11,14 @@ app.listen(port, () => {
 })
 
 app.get('*', (req, res) => {
-  const html = ReactDOM.renderToString(createElement(Spinner))
+  const Container = createElement(
+    Fragment,
+    null,
+    createElement(Spinner),
+    createElement(Grid),
+    createElement(Ripple)
+  )
+  const html = renderToString(Container)
   res.send(`
   <!DOCTYPE html>
 <html lang="en">
