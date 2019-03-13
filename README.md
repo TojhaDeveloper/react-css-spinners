@@ -5,3 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/TojhaDeveloper/react-css-spinners/badge.svg?branch=master)](https://coveralls.io/github/TojhaDeveloper/react-css-spinners?branch=master)
 
 CSS-only spinners for React
+
+## credits
+
+Code Realm
