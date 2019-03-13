@@ -1,10 +1,13 @@
 {
-  "name": "react-css-spinners",
+  "name": "react-css-sassbased-spinners",
   "version": "1.0.0",
   "description": "CSS-only  spinners for React",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
@@ -18,7 +21,8 @@
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:build": "build-storybook  -c storybook",
     "predeploy": "npm run storybook:build",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static",
+    "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {
